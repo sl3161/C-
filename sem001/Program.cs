@@ -12,7 +12,7 @@ else
 }*/
 /*Console.WriteLine ( num1==num2*num2 ? "Число 1 является квадратом числа 2" : "Число 1 не является квадратом числ)*/
 
-Console.WriteLine ("Введите номер дня ");
+/*Console.WriteLine ("Введите номер дня ");
 int day = int.Parse(Console.ReadLine ());
 if (day==1)
 {
@@ -49,6 +49,36 @@ if (day==7)
 {
    Console.WriteLine ("Воскресенье");
    return;
+}*/
+
+Console.WriteLine ("Введите номер дня :");
+int num = int.Parse (Console.ReadLine ());
+switch (num) 
+{
+    case 1:
+    Console.WriteLine ("Сегодня понедельник");
+    return;
+    case 2:
+    Console.WriteLine ("Сегодня вторник");
+    return;
+    case 3:
+    Console.WriteLine ("Сегодня среда");
+    return;
+    case 4:
+    Console.WriteLine ("Сегодня четверг");
+    return;
+    case 5:
+    Console.WriteLine ("Сегодня пятница");
+    return;
+    case 6:
+    Console.WriteLine ("Сегодня суббота");
+    return;
+    case 7:
+    Console.WriteLine ("Сегодня воскресенье");
+    return;
+    default:
+    Console.WriteLine ("Введенное значение должно быть от 1 до 7");
+    return;
 }
 
 
