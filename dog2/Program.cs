@@ -9,21 +9,21 @@ Console.WriteLine ("введите скорость 2-го человека");
 double v2 = Convert.ToDouble(Console.ReadLine ());
 Console.WriteLine ("введите скорость собаки");
 double v_dog = Convert.ToDouble(Console.ReadLine ());
-while (distance>1)
+while (distance>0.001)
 {
     if (b==1)
     {
-       t = distance/(v_dog+v2);
-       distance = distance - (v1+v2)*t;
+       t = distance/(v_dog*1000+v2*1000);
+       distance = distance - (v1*1000+v2*1000)*t;
        b=2;
     }
     if (b==2)
     {
-        t = distance /(v_dog+v1);
-        distance = distance - t*(v1+v2);
+        t = distance /(v_dog*1000+v1*1000);
+        distance = distance - t*(v1*1000+v2*1000);
         b=1;
     }
-    count++;
+    count=count+1;
 }
 Console.Write ("Собака успеет пробежать между людьми -");
 Console.WriteLine (count);
